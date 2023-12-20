@@ -8,7 +8,7 @@ plugins {
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 base {
-    archivesName = "${mod_name}-forge"
+    archivesName = "${mod_id}-forge"
 }
 mixin {
     add(sourceSets.main, "${mod_id}.refmap.json")
@@ -150,4 +150,10 @@ tasks.modrinth.doLast {
     if (project.hasProperty('modrinth_page') && tasks.modrinth.newVersion != null) {
         project.ext.modrinth_link = "${modrinth_page}/version/${tasks.modrinth.newVersion.id}"
     }
+}
+
+sourceSets.each {
+    def dir = layout.buildDirectory.dir("sourcesSets/$it.name")
+    it.output.resourcesDir = dir
+    it.java.destinationDirectory = dir
 }

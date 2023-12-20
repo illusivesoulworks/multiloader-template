@@ -1,5 +1,5 @@
 modLoader = "javafml" #mandatory
-loaderVersion = "${neoforge_loader_version_range}" #mandatory
+loaderVersion = "[1,)" #mandatory
 license = "${license}" # Review your options at https://choosealicense.com/.
 issueTrackerURL = "${issues_url}" #optional
 [[mods]] #mandatory
@@ -20,12 +20,14 @@ config = "${mod_id}.neoforge.mixins.json"
 [[dependencies.${mod_id}]] #optional
 modId = "neoforge" #mandatory
 mandatory = true #mandatory
+type = "required"
 versionRange = "${neoforge_loader_version_range}" #mandatory
 ordering = "NONE" # The order that this dependency should load in relation to your mod, required to be either 'BEFORE' or 'AFTER' if the dependency is not mandatory
 side = "BOTH" # Side this dependency is applied on - 'BOTH', 'CLIENT' or 'SERVER'
 [[dependencies.${mod_id}]]
 modId = "minecraft"
 mandatory = true
+type = "required"
 versionRange = "${minecraft_version_range}"
 ordering = "NONE"
 side = "BOTH"
