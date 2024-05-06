@@ -8,7 +8,6 @@ issueTrackerURL= "${issues_url}"
     displayName = "${mod_name}"
     displayURL = "${sources_url}"
     logoFile="${mod_id}_icon.png"
-    credits="${credits}"
     authors = "${mod_author}"
     description = '''${description}'''
 [[mixins]]
