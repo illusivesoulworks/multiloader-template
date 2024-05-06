@@ -25,6 +25,10 @@ repositories {
         }
         filter { includeGroupAndSubgroups("org.spongepowered") }
     }
+    maven {
+        name = 'Illusive Soulworks'
+        url = 'https://maven.theillusivec4.top'
+    }
 }
 
 dependencies {
