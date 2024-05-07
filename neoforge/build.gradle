@@ -35,6 +35,13 @@ runs {
     }
 }
 
+subsystems {
+    parchment {
+        minecraftVersion = "${parchment_mc}"
+        mappingsVersion = "${parchment_version}"
+    }
+}
+
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 dependencies {
