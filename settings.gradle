@@ -22,8 +22,7 @@ pluginManagement {
                 }
             }
             filter {
-                includeGroupAndSubgroups("net.neoforged")
-                includeGroup("codechicken")
+                includeGroupAndSubgroups('net.neoforged')
             }
         }
         exclusiveContent {
